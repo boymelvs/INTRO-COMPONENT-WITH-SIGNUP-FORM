@@ -51,7 +51,7 @@ footer a {
 
 /* ================= forms start here ================= */
 .forms {
-   padding: 2rem;
+   padding: 2.5rem;
    border-radius: 1rem;
    background-color: var(--white);
    box-shadow: 0 0.65rem rgba(0, 0, 0, 0.2);
@@ -59,7 +59,7 @@ footer a {
 }
 
 .form_field {
-   height: 8rem;
+   height: 7.5rem;
 }
 
 .field {
@@ -81,7 +81,7 @@ footer a {
 }
 
 .warning {
-   height: 3.5rem;
+   height: 2rem;
    text-align: right;
 }
 
