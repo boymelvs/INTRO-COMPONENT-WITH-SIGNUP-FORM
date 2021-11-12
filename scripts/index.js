@@ -4,7 +4,7 @@ const emailElement = document.querySelector(".email");
 const passwordElement = document.querySelector(".password");
 
 const btn = document.querySelector(".btn");
-const inputFields = document.querySelectorAll(".field");
+const form = document.querySelector(".forms");
 
 /* ================= utility functions start here =================*/
 // check input if empty
@@ -13,7 +13,7 @@ const isRequired = (value) => {
 };
 
 // check email if valid
-const isEmailValid = (email) => {
+const isEmailCorrect = (email) => {
    const format = /[^@ \t\r\n]+@[^@ \t\r\n]+\.(\w{2,3})+$/;
 
    return format.test(email);
@@ -36,9 +36,11 @@ const addRemoveClass = (isError, elem) => {
    if (isError) {
       warning.classList.add("message");
       elem.classList.add("icon_error");
+      elem.classList.remove("green_border");
    } else {
       warning.classList.remove("message");
       elem.classList.remove("icon_error");
+      elem.classList.add("green_border");
       noError = true;
    }
 
@@ -57,7 +59,7 @@ const checkEmail = (elem) => {
 
    return (
       addRemoveClass(!isRequired(value), elem) &&
-      addRemoveClass(!isEmailValid(value), elem)
+      addRemoveClass(!isEmailCorrect(value), elem)
    );
 };
 
@@ -86,30 +88,25 @@ btn.addEventListener("click", (event) => {
 });
 
 /* ================= real time validation ================= */
-inputFields.forEach((inputField) => {
-   let timeOutId;
-
-   inputField.addEventListener("input", (event) => {
-      if (timeOutId) {
-         clearTimeout(timeOutId);
+let timeOutId;
+form.addEventListener("input", (event) => {
+   //reset timer
+   if (timeOutId) {
+      clearTimeout(timeOutId);
+   }
+   // setup time to delay the validation
+   timeOutId = setTimeout(() => {
+      if (event.target.id === "first_name") {
+         checkTheName(firstNameElement);
       }
-
-      timeOutId = setTimeout(() => {
-         if (event.target.id === "first_name") {
-            checkTheName(inputField);
-         }
-
-         if (event.target.id === "last_name") {
-            checkTheName(inputField);
-         }
-
-         if (event.target.id === "email") {
-            checkEmail(inputField);
-         }
-
-         if (event.target.id === "password") {
-            checkPassword(inputField);
-         }
-      }, 750);
-   });
+      if (event.target.id === "last_name") {
+         checkTheName(lastNameElement);
+      }
+      if (event.target.id === "email") {
+         checkEmail(emailElement);
+      }
+      if (event.target.id === "password") {
+         checkPassword(passwordElement);
+      }
+   }, 750);
 });

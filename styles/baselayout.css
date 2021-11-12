@@ -133,3 +133,7 @@ footer a {
    background-repeat: no-repeat;
    border: 0.2rem solid var(--red);
 }
+
+.field:focus.green_border {
+   border: 0.2rem solid var(--green);
+}
