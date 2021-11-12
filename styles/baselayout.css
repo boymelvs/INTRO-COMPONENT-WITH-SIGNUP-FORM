@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --red: #ff7a7a;
+   --green: #38cc8c;
+   --blue: #6055a5;
+   --dark-blue: #3e3c49;
+   --grayish-blue: #b9b6d3;
+   --white: #ffffff;
+
+   --font-size-10: 62.5%; /* 10px */
+   --font-fam-poppins: "Poppins", sans-serif;
+   --font-weight-400: 400;
+   --font-weight-500: 500;
+   --font-weight-600: 600;
+   --font-weight-700: 700;
+}
+
+html {
+   font-size: var(--font-size-10);
+   font-family: var(--font-fam-poppins);
+}
+
+body {
+   font-size: 1.6rem;
+   font-weight: var(--font-weight-400);
+   background-color: var(--red);
+   color: var(--white);
+}
+
+footer {
+   text-align: center;
+}
+
+footer a {
+   text-decoration: none;
+}
+
+.days {
+   color: var(--white);
+   font-weight: var(--font-weight-500);
+}
+
+/* ================= forms start here ================= */
+.forms {
+   padding: 2rem;
+   border-radius: 1rem;
+   background-color: var(--white);
+   box-shadow: 0 0.65rem rgba(0, 0, 0, 0.2);
+   color: var(--grayish-blue);
+}
+
+.form_field {
+   height: 8rem;
+   /* border: 0.1rem solid red; */
+}
+
+.field {
+   width: 100%;
+   padding: 1.5rem;
+   border-radius: 0.5rem;
+   border: 0.1rem solid var(--grayish-blue);
+   font-weight: var(--font-weight-700);
+}
+
+.field:focus {
+   outline: none;
+   border: 0.17rem solid var(--dark-blue);
+}
+
+::placeholder {
+   opacity: 0.8;
+   font-weight: var(--font-weight-700);
+}
+
+.warning {
+   height: 3.5rem;
+   text-align: right;
+}
+
+.warning p {
+   display: none;
+}
+
+.btn {
+   text-transform: uppercase;
+   letter-spacing: 0.1rem;
+   padding: 1.5rem;
+   width: 100%;
+   font-weight: var(--font-weight-600);
+   color: var(--white);
+   background-color: var(--green);
+   border: none;
+   border-radius: 0.5rem;
+   box-shadow: 0 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+   outline: none;
+   cursor: pointer;
+   filter: brightness(110%) saturate(100%);
+}
+
+.terms_services {
+   padding: 1rem;
+   font-size: 1.2rem;
+}
+
+.terms {
+   color: var(--red);
+   font-weight: var(--font-weight-700);
+}
+
+/* css for javascripts show warning message start here */
+.warning p.message {
+   /* show warning message */
+   display: unset;
+   font-size: 1.2rem;
+   color: var(--red);
+}
+
+.field.icon_error {
+   /* icon error */
+   background-image: url("../images/icon-error.svg");
+   background-position: top 1rem right 3rem;
+   background-repeat: no-repeat;
+   border: 0.2rem solid var(--red);
+}

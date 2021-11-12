@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+         name="descritpion"
+         content="this a solution to frontend mentor challenge to build landing page intro component with signup form"
+      />
+      <meta name="keyword" content="html, css, flexbox, javascript" />
+      <meta name="author" content="melvin" />
+
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+
+      <link rel="stylesheet" href="./styles/baselayout.css" />
+
+      <link
+         rel="stylesheet"
+         href="./styles/mobile.css"
+         media="(min-width: 120px) and (max-width: 768px)"
+      />
+
+      <link
+         rel="stylesheet"
+         href="./styles/desktop.css"
+         media="(min-width: 769px)"
+      />
+
+      <title>Frontend Mentor | Intro component with sign up form</title>
+   </head>
+   <body>
+      <div class="container">
+         <main class="main_content">
+            <div class="title_details_container">
+               <h1 class="title">Learn to code by watching others</h1>
+               <p class="details">
+                  See how experienced developers solve problems in real-time.
+                  Watching scripted tutorials is great, but understanding how
+                  developers think is invaluable.
+               </p>
+            </div>
+
+            <div class="price_form_container">
+               <div class="price">
+                  <span class="days"> Try it free 7 days </span> then $20/mo.
+                  thereafter
+               </div>
+
+               <form
+                  action="#"
+                  id="claim_forms"
+                  class="forms"
+                  name="claim_forms"
+               >
+                  <div class="form_field">
+                     <label for="first_name"></label>
+                     <input
+                        type="text"
+                        id="first_name"
+                        class="field first_name"
+                        placeholder="First Name"
+                     />
+                     <div class="warning">
+                        <p>First Name cannot be empty</p>
+                     </div>
+                  </div>
+
+                  <div class="form_field">
+                     <label for="last_name"></label>
+                     <input
+                        type="text"
+                        id="last_name"
+                        class="field last_name"
+                        placeholder="Last Name"
+                     />
+                     <div class="warning">
+                        <p>Last Name cannot be empty</p>
+                     </div>
+                  </div>
+
+                  <div class="form_field">
+                     <label for="email"></label>
+                     <input
+                        type="email"
+                        id="email"
+                        class="field email"
+                        placeholder="Email Address"
+                     />
+                     <div class="warning">
+                        <p>Looks like this is not an email</p>
+                     </div>
+                  </div>
+
+                  <div class="form_field">
+                     <label for="password"></label>
+                     <input
+                        type="text"
+                        id="password"
+                        class="field password"
+                        placeholder="Password"
+                     />
+                     <div class="warning">
+                        <p>Minimum 8 characters. Password cannot be empty.</p>
+                     </div>
+                  </div>
+
+                  <button type="submit" id="btn" class="btn">
+                     Claim your free trial
+                  </button>
+
+                  <p class="terms_services">
+                     By clicking the button, you are agreeing to our
+                     <span class="terms"> Terms and Services </span>
+                  </p>
+               </form>
+            </div>
+         </main>
+
+         <footer>
+            <p class="attribution">
+               Challenge by
+               <a
+                  href="https://www.frontendmentor.io?ref=challenge"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Frontend Mentor</a
+               >. Coded by
+               <a
+                  href="https://github.com/boymelvs"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >boymelvs</a
+               >.
+            </p>
+         </footer>
+
+         <script src="./scripts/index.js"></script>
+      </div>
+   </body>
+</html>
