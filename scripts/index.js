@@ -56,11 +56,16 @@ const checkTheName = (elem) => {
 
 const checkEmail = (elem) => {
    const value = elem.value.trim();
+   const formField = elem.parentElement;
+   const warning = formField.querySelector(".warning p");
 
-   return (
-      addRemoveClass(!isRequired(value), elem) &&
-      addRemoveClass(!isEmailCorrect(value), elem)
-   );
+   const isEmpty = !isRequired(value)
+      ? (warning.innerHTML = "Email cannot be empty")
+      : !isEmailCorrect(value)
+      ? (warning.innerHTML = "Looks like this is not an email")
+      : false;
+
+   return addRemoveClass(isEmpty, elem) && addRemoveClass(isEmpty, elem);
 };
 
 const checkPassword = (elem) => {
