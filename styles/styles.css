@@ -54,7 +54,7 @@ footer a {
 
 .main_content {
    display: flex;
-   gap: 5rem; /* title_details_container and price_form_container */
+   gap: 5rem; /* between title_details_container and price_form_container */
    text-align: center;
 }
 
@@ -71,7 +71,7 @@ footer a {
 .price_form_container {
    display: flex;
    flex-direction: column;
-   gap: 2rem; /*betweern price and forms */
+   gap: 2rem; /*between price and form */
 }
 
 .price {
